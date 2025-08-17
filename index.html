@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<title>Bonechain — Block Summoner (v6.0)</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="build">Bonechain v6.0 • Portrait</div>
+  <div class="hud">
+    <div class="chip" id="waveChip">Wave 1</div>
+    <div class="chip" id="hpChip">HP 60</div>
+    <div class="chip" id="soulsChip">Souls 0</div>
+    <div class="chip rate" id="rateChip">Block: 0.80s</div>
+    <div class="chip" id="bestChip">Best: 0</div>
+  </div>
+  <button id="btnPause" class="btn" aria-label="Pause">⏸</button>
+</header>
+
+<main>
+  <canvas id="field" width="405" height="720" aria-label="battlefield"></canvas>
+</main>
+
+<div id="synergies"></div>
+
+<footer>
+  <div class="legend">
+    <span class="b b-SK">💀 SKEL</span>
+    <span class="b b-AR">🏹 ARCH</span>
+    <span class="b b-WR">👻 WRAITH</span>
+    <span class="b b-DB">☠️ BLAST</span>
+  </div>
+  <div id="blockBar" class="bar" aria-label="skill blocks"></div>
+</footer>
+
+<div id="modalWrap" class="modalWrap" role="dialog" aria-modal="true">
+  <div class="modal">
+    <h2 id="modalTitle">Choose a Relic</h2>
+    <div class="choiceList" id="choiceList"></div>
+    <div class="row">
+      <button class="btn" id="btnSkip">Skip (+1 Soul)</button>
+      <button class="btn" id="btnContinue">Continue</button>
+    </div>
+  </div>
+</div>
+
+<div class="tip" id="tip">Tap 1–3 matching blocks to <b>summon</b>. Use 3 to <b>upgrade ★</b> that family.</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
